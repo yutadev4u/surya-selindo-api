@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "node index.js",
+    "start": "pm2 start ecosystem.config.json --no-daemon",
     "db:migrate:undo": "npx sequelize-cli db:migrate:undo:all",
     "db:migrate": "npx sequelize-cli db:migrate",
     "db:seed:product": "npx sequelize-cli db:seed --seed 20240830025006-product-seeders.js",
